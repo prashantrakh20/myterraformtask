@@ -58,8 +58,8 @@ module "virtualmachine" {
 module "database" {
   source      = "../module/DB"
   rgname = azurerm_resource_group.myterraformgroup.name
-  location = var.location
-  environment = azurerm_resource_group.myterraformgroup.location
+  location = azurerm_resource_group.myterraformgroup.location
+  environment = var.environment
   mysql_database = var.mysql_database
 
 }  
